@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/home.css">
     <title>Document</title>
-</head>
-<body>
-    <article>
-        <form>
-            <label>
-                <input type="radio" name="answers" value="Michael Scott" checked>
-                <img src="https://via.placeholder.com/40x60/0bf/fff&text=A">
-              </label>
-              <label>
-                <input type="radio" name="answers" value="Jim Halper">
-                <img src="https://via.placeholder.com/40x60/b0f/fff&text=B">
-              </label>
-              <label>
-                <input type="radio" name="answers" value="Dwight Schrute">
-                <img src="https://via.placeholder.com/40x60/0da/fff&text=C">
-              </label>
-              <label>
-                <input type="radio" name="answers" value="Pam Beesly">
-                <img src="https://via.placeholder.com/40x60/fd0/fff&text=D">
-              </label>
-        </form>
+  </head>
+  <body>
+    <article class="answers">
+      <form class="answers__form">
+        <label class="answers__answer">
+          <input type="radio"  name="answers" value="Michael Scott" checked />
+          <img src="https://via.placeholder.com/150x200/0bf/fff&text=A" />
+        </label>
+        <label class="answers__answer">
+          <input type="radio" name="answers" value="Jim Halper" />
+          <img src="https://via.placeholder.com/150x200/b0f/fff&text=B" />
+        </label>
+        <label class="answers__answer">
+          <input type="radio" name="answers" value="Dwight Schrute" />
+          <img src="https://via.placeholder.com/150x200/0da/fff&text=C" />
+        </label>
+        <label class="answers__answer">
+          <input type="radio" name="answers" value="Pam Beesly" />
+          <img src="https://via.placeholder.com/150x200/fd0/fff&text=D" />
+        </label>
+        <button class="button button--skip">Skip</button>
+        <button type="submit" class="button">Submit</button>
+      </form>
     </article>
-</body>
+  </body>
 </html>
