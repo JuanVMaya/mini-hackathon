@@ -45,6 +45,47 @@ body {
     margin-top: 0.2rem;
   }
 }
+.hero {
+  background: url(../assets/images/scott-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 80vh;
+  opacity: 0.9;
+  padding: 10rem 4rem;
+  background-position: 0 25%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 85rem;
+    margin: 0 auto;
+  }
+
+  &__paper {
+    background: url(../assets/images/paper-template.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 40rem;
+    min-height: 20rem;
+    padding: 9rem 1rem 1rem 1rem;
+    border: 0.625rem solid $lighting-blue;
+    border-radius: 1.563rem;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__quote {
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    color: $gray;
+  }
+}
 .answers {
   padding: 2.5rem;
   &__form {
