@@ -7,11 +7,44 @@
   margin: 0;
   padding: 0;
 }
-.body {
-  font-family: "Typist", sans-serif;
+body {
+  font-family: Helvetica;
   font-size: 1rem;
 }
+.nav {
+  background-color: black;
+  opacity: 0.8;
+  color: whitesmoke;
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  &__text {
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__logo {
+    padding: 1.45rem 1.875rem 1.15rem 1.875rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__subtitle {
+    font-size: 3.5rem;
+  }
+
+  &__img {
+    max-width: 8.75rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+  }
+}
 .answers {
   padding: 2.5rem;
   &__form {
@@ -25,8 +58,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-    &:checked+label{
-        border:solid 10px $nitro-blue;
+    &:checked + label {
+      border: solid 10px $nitro-blue;
     }
   }
 }

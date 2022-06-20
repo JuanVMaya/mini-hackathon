@@ -4,27 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/home.css" />
     <title>Document</title>
   </head>
   <body>
+    <header class="nav">
+      <div class="nav__text">
+        <div class="nav__logo">
+          <h1 class="nav__title">He said, She said</h1>
+          <h2 class="nav__subtitle">The Office Edition</h2>
+        </div>
+        <img
+          class="nav__img"
+          src="./assets/logo/logo.jpeg"
+          alt="the-office-logo"
+        />
+      </div>
+    </header>
+    <!-- Insert Hero section here -->
     <article class="answers">
       <form class="answers__form">
-        <label class="answers__answer">
-          <input type="radio"  name="answers" value="Michael Scott" checked />
-          <img src="https://via.placeholder.com/150x200/0bf/fff&text=A" />
+        <label class="answers__answer"
+          >Michael Scott
+          <input type="radio" name="answers" value="Michael Scott" checked />
         </label>
-        <label class="answers__answer">
+        <label class="answers__answer"
+          >Jim Halper
           <input type="radio" name="answers" value="Jim Halper" />
-          <img src="https://via.placeholder.com/150x200/b0f/fff&text=B" />
         </label>
-        <label class="answers__answer">
+        <label class="answers__answer"
+          >Dwight Schrute
           <input type="radio" name="answers" value="Dwight Schrute" />
-          <img src="https://via.placeholder.com/150x200/0da/fff&text=C" />
         </label>
-        <label class="answers__answer">
+        <label class="answers__answer"
+          >Pam Beesly
           <input type="radio" name="answers" value="Pam Beesly" />
-          <img src="https://via.placeholder.com/150x200/fd0/fff&text=D" />
         </label>
         <button class="button button--skip">Skip</button>
         <button type="submit" class="button">Submit</button>
