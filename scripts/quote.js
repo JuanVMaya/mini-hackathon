@@ -8,11 +8,11 @@ function generateNewQuote() {
     .then((response) => {
       quotesCard.innerText = response.data.data.content;
       console.log(response.data.data.character.firstname);
-      let answerAuthor =
+      finalAnswer =
         response.data.data.character.firstname +
         " " +
         response.data.data.character.lastname;
-      randomAnswers.push(answerAuthor);
+      randomAnswers.push(finalAnswer);
 
       //The office API - Character Info
       axios
@@ -36,11 +36,16 @@ function generateNewQuote() {
             }
           }
           randomAnswers.sort();
-          console.log(randomAnswers);
-          //We have our answers, both random and the correct one
-          //update answers_answer label
-          //value attribute in radio button
-          // img.setAttribute('value',randomAnswers[0]);
+          let characterLabels = document.querySelectorAll(".answers__answer");
+          for (let i = 0; i < 4; i++) {
+            characterLabels[i].innerText = randomAnswers[i];
+            let answerRadio = document.createElement("input");
+            answerRadio.setAttribute("value", randomAnswers[i]);
+            answerRadio.setAttribute("type", "radio");
+            answerRadio.setAttribute("name", "answer");
+            answerRadio.classList.add("answers__answer-radio");
+            characterLabels[i].appendChild(answerRadio);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -52,6 +57,9 @@ function generateNewQuote() {
 }
 
 let randomAnswers = [];
+let finalAnswer = "";
+let score = 0;
+let submittedFlag = false;
 generateNewQuote();
 
 //Submission of the form
@@ -61,15 +69,19 @@ let heroPaperEl = document.querySelector(".hero__paper");
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (!submittedFlag) {
+    let answer = event.target.querySelector("input[type=radio]:checked").value;
 
-  let answer = event.target.querySelector("input[type=radio]:checked").value;
-
-  if (randomAnswers.includes(answer)) {
-    heroPaperEl.classList.add("hero__paper--correct");
-  } else {
-    heroPaperEl.classList.add("hero__paper--wrong");
+    if (finalAnswer === answer) {
+      heroPaperEl.classList.add("hero__paper--correct");
+      score += 1;
+      console.log(score);
+    } else {
+      heroPaperEl.classList.add("hero__paper--wrong");
+    }
+    skipButton.innerText = "Next";
+    submittedFlag = true;
   }
-  skipButton.innerText = "Next";
 });
 
 //Reset the form and generate new quote
@@ -80,4 +92,5 @@ skipButton.addEventListener("click", (event) => {
   skipButton.innerText = "Skip";
   heroPaperEl.classList.remove("hero__paper--correct");
   heroPaperEl.classList.remove("hero__paper--wrong");
+  submittedFlag = false;
 });
