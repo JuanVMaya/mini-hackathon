@@ -20,31 +20,34 @@ body {
   padding-bottom: 1rem;
   display: flex;
   justify-content: space-evenly;
+
   &__text {
     border: 2px solid whitesmoke;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    &:hover {
+      text-shadow: 0 0.5px white;
+      box-shadow: 7px 2px whitesmoke;
+    }
   }
-
   &__logo {
     padding: 1.45rem 1.875rem 1.15rem 1.875rem;
   }
-
   &__title {
     font-size: 2rem;
   }
-
   &__subtitle {
     font-size: 3.5rem;
   }
-
   &__img {
     max-width: 8.75rem;
     margin-right: 1rem;
     margin-top: 0.2rem;
+    border-radius: 10px;
   }
 }
+
 .hero {
   background: url(../assets/images/scott-wallpaper.jpg);
   background-size: cover;
@@ -53,14 +56,12 @@ body {
   opacity: 0.9;
   padding: 10rem 4rem;
   background-position: 0 25%;
-
   &__container {
     display: flex;
     align-items: center;
     max-width: 85rem;
     margin: 0 auto;
   }
-
   &__paper {
     background: url(../assets/images/paper-template.jpg);
     background-size: cover;
@@ -74,13 +75,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &--correct {
+      box-shadow: 10px 5px 20px 5px $green-glow;
+    }
+    &--wrong {
+      box-shadow: 10px 5px 20px 5px $red-glow;
+    }
   }
-
   &__quote {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
-    color: $gray;
+    color: #042045;
   }
 }
 .answers {
@@ -105,10 +111,18 @@ body {
     align-items: center;
     margin-bottom: 1.5rem;
     border-radius: 5px;
-    border: solid 4px $lighting-blue;
+    border: solid 4px $deep-koamaru;
     transform: scale(1.1);
     font-weight: 600;
     transition: all 0.2s ease-in-out;
+    background: $light-gray;
+    color: $deep-koamaru;
+
+    &:hover {
+      color: $light-gray;
+      background-color: $deep-koamaru;
+    }
+
     &:checked + label {
       border: solid 10px $lighting-blue;
       background-color: red;
@@ -117,8 +131,8 @@ body {
   &__answer-radio {
     color: $lighting-blue;
     margin-left: 1rem;
-    &:hover{
-        background-color: $gray;
+    &:hover {
+      background-color: $gray;
     }
   }
 }
@@ -131,9 +145,14 @@ body {
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
+
   &:hover {
-    transform: scale(1.1);
+    transform: scaleX(1.2) scaleY(1.4);
+    background-color: $lighting-blue;
+    color: $white;
+    opacity: 0.8;
   }
+
   &--skip {
     margin-right: 1rem;
   }
