@@ -24,7 +24,7 @@
     <main>
       <article class="hero">
         <div class="hero__container">
-          <div class="hero__paper">
+          <div class="hero__paper hero_paper--correct hero_paper--wrong">
             <h1 class="hero__quote">
               "quote will appear here. quote will appear here. quote will appear
               here. quote will appear here. quote will appear here. quote will
@@ -32,31 +32,56 @@
               will appear here. quote will appear here. quote will appear here.
               quote will appear here. quote will appear here."
             </h1>
+            <section class="answers">
+              <form class="answers__form">
+                <div class="answers__container">
+                  <label class="answers__answer"
+                    >Michael Scott
+                    <!-- The 'value' is a placeholder -->
+                    <input
+                      class="answers__answer-radio"
+                      type="radio"
+                      name="answer"
+                      value="Michael Scott"
+                      checked
+                    />
+                  </label>
+                  <label class="answers__answer"
+                    >Jim Halper
+                    <input
+                      class="answers__answer-radio"
+                      type="radio"
+                      name="answer"
+                      value="Jim Halper"
+                    />
+                  </label>
+                  <label class="answers__answer"
+                    >Dwight Schrute
+                    <input
+                      class="answers__answer-radio"
+                      type="radio"
+                      name="answer"
+                      value="Dwight Schrute"
+                    />
+                  </label>
+                  <label class="answers__answer"
+                    >Pam Beesly
+                    <input
+                      class="answers__answer-radio"
+                      type="radio"
+                      name="answer"
+                      value="Pam Beesly"
+                    />
+                  </label>
+                </div>
+                <button type="skip" class="button button--skip">Skip</button>
+                <button type="submit" class="button">Submit</button>
+              </form>
+            </section>
           </div>
         </div>
       </article>
-    <article class="answers">
-      <form class="answers__form">
-        <label class="answers__answer"
-          >Michael Scott
-          <input type="radio" name="answers" value="Michael Scott" checked />
-        </label>
-        <label class="answers__answer"
-          >Jim Halper
-          <input type="radio" name="answers" value="Jim Halper" />
-        </label>
-        <label class="answers__answer"
-          >Dwight Schrute
-          <input type="radio" name="answers" value="Dwight Schrute" />
-        </label>
-        <label class="answers__answer"
-          >Pam Beesly
-          <input type="radio" name="answers" value="Pam Beesly" />
-        </label>
-        <button class="button button--skip">Skip</button>
-        <button type="submit" class="button">Submit</button>
-      </form>
-    </article>
+    </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/select-answers.js"></script>
   </body>
