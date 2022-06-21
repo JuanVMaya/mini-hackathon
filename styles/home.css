@@ -27,6 +27,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.nav__text:hover {
+  text-shadow: 0 0.5px white;
+  box-shadow: 7px 2px whitesmoke;
+}
 .nav__logo {
   padding: 1.45rem 1.875rem 1.15rem 1.875rem;
 }
@@ -40,12 +44,14 @@ body {
   max-width: 8.75rem;
   margin-right: 1rem;
   margin-top: 0.2rem;
+  border-radius: 10px;
 }
 
 .hero {
   background: url(../assets/images/scott-wallpaper.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 84vh;
   width: 100%;
   opacity: 0.9;
   padding: 10rem 4rem;
@@ -71,11 +77,17 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.hero__paper--correct {
+  box-shadow: 10px 5px 20px 5px #2ecc71;
+}
+.hero__paper--wrong {
+  box-shadow: 10px 5px 20px 5px #e74c3c;
+}
 .hero__quote {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   width: 100%;
   text-align: center;
-  color: #727980;
+  color: #042045;
 }
 
 .answers {
@@ -101,10 +113,16 @@ body {
   align-items: center;
   margin-bottom: 1.5rem;
   border-radius: 5px;
-  border: solid 4px #17459d;
+  border: solid 4px #2a3c5f;
   transform: scale(1.1);
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  background: #e7e7e7;
+  color: #2a3c5f;
+}
+.answers__answer:hover {
+  color: #e7e7e7;
+  background-color: #2a3c5f;
 }
 .answers__answer:checked + label {
   border: solid 10px #17459d;
@@ -129,7 +147,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 .button:hover {
-  transform: scale(1.1);
+  transform: scaleX(1.2) scaleY(1.4);
+  background-color: #17459d;
+  color: #ffffff;
+  opacity: 0.8;
 }
 .button--skip {
   margin-right: 1rem;
